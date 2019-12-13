@@ -14,7 +14,6 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.Matchers.containsString;
-import static org.junit.Assert.assertFalse;
 
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
@@ -28,7 +27,6 @@ public class MainActivityTest {
     }
     @Test
     public void buttonCloseActionTest() {
-        assertFalse(mActivityTestRule.getActivity().isDestroyed());
         onView(withId(R.id.btnCloseApp)).perform(click());
         assertTrue(mActivityTestRule.getActivity().isFinishing());
     }

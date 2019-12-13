@@ -12,11 +12,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnClose = (Button) findViewById(R.id.btnCloseApp);
+        Button btnClose = findViewById(R.id.btnCloseApp);
 
         btnClose.setOnClickListener((View v) -> {
             finish();
-            //System.exit(1);
         });
     }
 }
